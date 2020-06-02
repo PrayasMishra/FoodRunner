@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background=" #003cb3"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgScooterLogo"
+        android:layout_width="220dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/food_delivery"
+        android:layout_centerHorizontal="true"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FoodRunner"
+        android:layout_below="@id/imgScooterLogo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-black"
+        android:textSize="45dp"
+        />
+
+</RelativeLayout>
