@@ -39,28 +39,27 @@ class LoginActivity : AppCompatActivity() {
         txtForgotPassword = findViewById(R.id.txtForgotPassword)
         txtSignUp = findViewById(R.id.txtSignUp)
 
-        /*
-        var checkMobileNumber: String = intent.getStringExtra("mobileNumber")
-        var checkPassword: String = intent.getStringExtra("password")
-        validMobileNumber.add(checkMobileNumber)
-        validPassword.add(checkPassword)
-
         btnLogin.setOnClickListener{
             val mobileNumber = etMobileNumber.text.toString()
             val password = etPassword.text.toString()
+            var checkMobileNumber: String = intent.getStringExtra("mobileNumber")
+            var checkPassword: String = intent.getStringExtra("password")
+            validMobileNumber.add(checkMobileNumber)
+            validPassword.add(checkPassword)
             val intent = Intent(this@LoginActivity,UserActivity::class.java)
-            if(validMobileNumber.contains(mobileNumber) && validPassword.contains(checkPassword))
+            if(validMobileNumber.contains(mobileNumber) && validPassword.contains(password))
             {
                 intent.putExtra("mobileNumber",mobileNumber)
                 intent.putExtra("password",password)
                 startActivity(intent)
-            }else{
+            }
+            else{
                 Toast.makeText(this@LoginActivity
                     ,"Incorrect Credentials"
                     ,Toast.LENGTH_LONG).show()
             }
         }
-         */
+
 
         txtForgotPassword.setOnClickListener {
             val intent = Intent(this@LoginActivity, ForgotPasswordActivity::class.java)
@@ -71,6 +70,11 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        finish()
     }
 
     fun savePreferences(title: String) {
